@@ -1,0 +1,287 @@
+/* ===============================
+   RESET + BASE TYPOGRAPHIE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: #fff;
+  color: #1d1d1b;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   STRUCTURE
+================================ */
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.-padded {
+  padding: 0 8rem;
+}
+.-small {
+  max-width: 84rem;
+}
+
+/* ===============================
+   TITRE FIXE EN ARRIÈRE-PLAN
+================================ */
+.project-title-bg {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  pointer-events: none;
+  background: #fff;
+}
+.project-title-bg h1 {
+  font-size: clamp(4rem, 15vw, 12rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #e0e0e0;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  user-select: none;
+}
+
+/* ===============================
+   CONTENU SCROLLABLE
+================================ */
+.scroll-content {
+  position: relative;
+  z-index: 2;
+  min-height: 200vh;
+  padding-top: 100vh;
+}
+
+/* ===============================
+   BOUTON RETOUR
+================================ */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  margin-bottom: 3rem;
+  background: #1d1d1b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.back-button:hover {
+  background: #333;
+  transform: translateX(-4px);
+}
+
+/* ===============================
+   DESCRIPTION DU PROJET
+================================ */
+.project-description {
+  background: #fff;
+  padding: 6rem 0;
+}
+.description-card {
+  border-top: 1px solid #e2e2e2;
+  padding-top: 4rem;
+}
+
+/* ===============================
+   MÉTADONNÉES
+================================ */
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e2e2e2;
+}
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.meta-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.meta-value {
+  font-size: 1.1rem;
+  color: #1d1d1b;
+  font-weight: 500;
+}
+
+/* ===============================
+   TEXTE + TITRES
+================================ */
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 3rem 0 1.5rem;
+  color: #1d1d1b;
+  line-height: 1.2;
+}
+h2:first-of-type {
+  margin-top: 0;
+}
+.description-text {
+  font-size: 1.125rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+/* ===============================
+   TAGS
+================================ */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+.tag {
+  padding: 0.6rem 1.5rem;
+  background: #f6f6f6;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.tag:hover {
+  background: #1d1d1b;
+  color: #fff;
+  border-color: #1d1d1b;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   GALERIE
+================================ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.gallery-item {
+  aspect-ratio: 16 / 10;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* ===============================
+   RÉSULTATS
+================================ */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0 4rem;
+}
+.result-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 1px solid #e2e2e2;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.result-item:hover {
+  background: #1d1d1b;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.result-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1d1d1b;
+  transition: color 0.3s ease;
+}
+.result-label {
+  font-size: 0.95rem;
+  color: #666;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.result-item:hover .result-number,
+.result-item:hover .result-label {
+  color: #fff;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #888;
+  font-size: 0.95rem;
+  border-top: 1px solid #e2e2e2;
+  margin-top: 6rem;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .-padded { padding: 0 4rem; }
+}
+@media (max-width: 768px) {
+  .-padded { padding: 0 2rem; }
+  .project-title-bg h1 { font-size: clamp(3rem, 12vw, 8rem); }
+  h2 { font-size: 2rem; }
+  .description-text { font-size: 1rem; }
+  .project-meta { gap: 2rem; }
+  .gallery, .results-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .result-number { font-size: 2.5rem; }
+  .back-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
