@@ -285,3 +285,53 @@ footer {
     justify-content: center;
   }
 }
+
+
+/* ---- Animation fade / slide au scroll ---- */
+.description-text,
+.result-item,
+.gallery-item,
+.project-meta,
+h2,
+.tags {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1),
+              transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: opacity, transform;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-title-bg {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  pointer-events: none;
+  background: transparent; /* ✅ rendu clean et invisible */
+}
+
+
+.project-title-bg h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: #111;
+}
+
+/* Empêche les éléments invisibles d’interférer */
+.description-text:not(.visible),
+.result-item:not(.visible),
+.gallery-item:not(.visible),
+.project-meta:not(.visible),
+h2:not(.visible),
+.tags:not(.visible) {
+  pointer-events: none;
+}
+ 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio — NEXUS | Hind Aazaoui</title>
+  <title> C| Hind Aazaoui</title>
 
   <!-- Typographie -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 <body>
   <!-- Titre fixe -->
   <div class="project-title-bg">
-    <h1>NEXUS</h1>
+    <h1> Community management </h1>
   </div>
 
   <!-- Contenu scrollable -->
@@ -115,5 +115,32 @@
       <p>© 2024 Hind Aazaoui — Portfolio UX/UI Designer</p>
     </footer>
   </div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // On sélectionne tout sauf le titre
+    const elements = document.querySelectorAll(
+      ".description-text, .result-item, .gallery-item, .project-meta, h2, .tags"
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.1, // visible à 10%
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  });
+</script>
+
+
 </body>
 </html>
